@@ -1,0 +1,56 @@
+<meta charset = 'utf-8'>
+<script type = 'text/javascript'>
+
+	var answer1 = parseInt(Math.random() * 100);
+	var answer2 = parseInt(Math.random() * 100);
+	var count = 1;
+	var turnCount1 = 0;
+	var turnCount2 = 0;
+	var warning = alert("Игра для двух игроков. Компьютер загадывает число от 1 до 99, а игроки должны его отгадать, используя подсказки.\nДля каждого игрока загадано отдельное число, ходы делаются по очереди.\nВсего дано 7 ходов, по истечении которых объявляется ничья.\nДля выхода в любое время введите \"q\".");
+		
+while(turnCount1 < 7 || turnCount2 < 7) {
+	if (count % 2 !== 0) {
+		var userAnswer1 = prompt("Попытка игрока №1");
+		if (userAnswer1 > answer1) {
+				alert("Предположенное число больше загаданного.");
+				count++;
+				turnCount1++;
+		} else if (userAnswer1 < answer1) {
+				alert("Предположенное число меньше загаданного.");
+				count++;
+				turnCount1++;
+		} else if (userAnswer1 == answer1) { 
+				alert("Игрок №1 угадал верно и выиграл за " + turnCount1 + " ходов!")
+				count++;
+				turnCount1++;
+				break;
+		} else if (userAnswer1.toLowerCase() == "q") {
+				break;
+		};
+
+		} else if (count % 2 == 0) {
+		var userAnswer2 = prompt("Попытка игрока №2");
+		if (userAnswer2 > answer2) {
+				alert("Предположенное число больше загаданного.");
+				count++;
+				turnCount2++;
+		} else if (userAnswer2 < answer2) {
+				alert("Предположенное число меньше загаданного.");
+				count++;
+				turnCount2++;
+		} else if (userAnswer2 == answer2) { 
+				alert("Игрок №2 угадал верно и выиграл за " + turnCount2 + " ходов!")
+				count++;
+				turnCount2++;
+				break;
+		} else if (userAnswer2.toLowerCase() == "q") {
+				break;
+		};
+	};
+};
+
+if (turnCount1 >= 7 || turnCount2 >= 7) {
+	alert("7 ходов истекло. Ничья!\nЧтобы сыграть ещё раз нажмите f5 или перезагрузите страничку.");
+};
+
+</script>

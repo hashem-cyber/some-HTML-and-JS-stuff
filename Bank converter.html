@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset = "utf-8">
+		<title>Банковский калькулятор</title>
+	</head>
+
+	<body>
+		<h1><b>Калькулятор для банковского вклада</b></h1>
+		<script>
+			var summ = parseInt(prompt("Какова сумма вклада?"));
+			var rate = parseInt(prompt("Каков ежегодный процент?\n(в процентах от 0 до 100)"));
+			var years = parseInt(prompt("На сколько лет вклад?"));
+			var count = 0;
+			if (isNaN(summ) || isNaN(rate) || isNaN(years)) {
+				document.write("Следует вводить только цифры!<br>");				
+			} else {
+				document.write("Исходная сумма составляет " + summ + " рублей.<br>");
+				do {
+					var summ = summ*(1+rate/100);
+					count++;
+					document.write(summ + " рублей на " + count + " год.<br>");
+				} while (count < years);
+				};	
+		</script>
+		</body>
+</html>

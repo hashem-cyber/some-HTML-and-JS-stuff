@@ -1,0 +1,22 @@
+body {
+	font-family: sans-serif; 
+	background-color: grey;"
+}
+
+#header {
+	background-color: white;
+	height: 45px;
+	border: 3px solid red;
+	min-width: 640px;
+	text-align:center ;
+	padding-top: 25px;
+}
+
+#footer {
+	background-color: white;
+	height: 45px;
+	border: 3px solid red;
+	min-width: 640px;
+	text-align:center ;
+	padding-top: 25px;
+}
