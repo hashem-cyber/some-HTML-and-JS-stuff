@@ -5,6 +5,8 @@
 	<meta charset = 'utf-8'>
 	<title>Сайт-визитка</title>
 	<link rel = "stylesheet" href = "style.css">
+	<script src = "js.js"></script>
+
 </head>
 
 <body>
@@ -18,16 +20,23 @@
 
 		<div id = "content">
 			<h1>Визитка-сайт</h1>
-			<h2><b>Визитка-сайт помельче, но жирнее</b></h2>
-			<h3><p style = "background-color: blue">Визитка-сайт еще мельче</p></h3>
 
-			<img src="drake.jpg"></img>
+			<div id = "center">
+				<h3>Игра в загадки</h3>
 
-			<p>Приветствие. тексттексттексттексттексттексттексттексттексттексттексттекст.</p>
+				<div id = "box">
+				<h5>Отгадай загадки!</h5>
+				<p>Сто одёжек и все без застёжек</p>
+				<input type = "text" id = "answer1">
 
-			<p>Это пример ссылки <a href="http://javarush.ru/sale.jsp">жмак</a> </p>
+				<p>Зимой и летом - одним цветом</p>
+				<input type = "text" id = "answer2">
 
-			<p>Тут можно сыграть в игры на JavaSript.</p>
+				<br></br>
+				<a href = "#" onclick="puzzle();">Отправить</a>
+
+				</div>
+			</div>
 		</div>
 	<br></br>
 
