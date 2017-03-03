@@ -4,4 +4,4 @@
 
 (⌐■_■)
 
-Nothing special, just simple site.
+Nothing to see here.
